@@ -5,7 +5,9 @@ void setup() {
 }
 
 //🎯Varaible Declarations Go Here
-var eyeSize = 8;
+var eyeSize = 15;
+var teethlong = 40;
+var earlong = 100;
 
 //🟢Draw Procedure - Runs on Repeat
 void draw(){
@@ -15,8 +17,8 @@ void draw(){
 
   //💡⬇️⬇️⬇️💡 Your Code For This Unit Goes Here
   
-  ellipse(150, 70, 60, 120);  // left ear
-  ellipse(240, 70, 60, 120);  // right ear
+  ellipse(150, 70, 60, earlong);  // left ear
+  ellipse(240, 70, 60, earlong);  // right ear
 
   ellipse(200, 170, 150, 150);    // face
 
@@ -26,9 +28,9 @@ void draw(){
 
   line(150, 200, 250, 200);   // mouth
 
-  noFill();
-  rect(185, 200, 15, 10); // left tooth
-  rect(200, 200, 15, 10); // right tooth
+  fill(245, 245, 220);
+  rect(185, 200, 15, teethlong); // left tooth
+  rect(200, 200, 15, teethlong); // right tooth
   
 
 }
@@ -50,7 +52,9 @@ void mousePressed(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
   text(myText, mouseX + 15, mouseY);
   console.log(myText);
-  
+  eyeSize ++
+  teethlong ++
+  earlong ++
   
 }
 
